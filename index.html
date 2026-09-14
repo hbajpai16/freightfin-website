@@ -27,36 +27,37 @@ body{
     padding:0 28px;
 }
 
-/* ---------------- NAV ---------------- */
+/* ---------------- NAV (DESKTOP) ---------------- */
 
 nav{
+    height:78px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:18px 0;
     border-bottom:1px solid var(--line);
-    position:relative;
+    padding:28px 0;
 }
 
 nav img{
-    height:52px;
+    height:240px;
     width:auto;
 }
 
-/* Desktop nav */
 .nav-links{
     display:flex;
-    gap:32px;
+    gap:30px;
+    font-size:14px;
+    color:#52627a;
 }
 
 .nav-links a{
-    font-size:16px;
-    color:#0a1a2a;
     text-decoration:none;
+    color:#0a1a2a;
     font-weight:600;
 }
 
-/* Hamburger button */
+/* ---------------- MOBILE HAMBURGER ---------------- */
+
 .hamburger{
     display:none;
     flex-direction:column;
@@ -71,17 +72,15 @@ nav img{
     border-radius:3px;
 }
 
-/* Mobile menu */
 .mobile-menu{
     display:none;
     flex-direction:column;
     background:#fff;
     border-bottom:1px solid var(--line);
-    padding:18px 0;
 }
 
 .mobile-menu a{
-    padding:12px 28px;
+    padding:14px 28px;
     font-size:16px;
     color:#0a1a2a;
     text-decoration:none;
@@ -91,14 +90,14 @@ nav img{
 /* ---------------- HERO ---------------- */
 
 .hero{
-    padding:70px 0 60px;
+    padding:92px 0 78px;
     background:linear-gradient(180deg,#f7faff,#fff);
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:60px;
+    grid-template-columns:1.15fr .85fr;
+    gap:70px;
     align-items:center;
 }
 
@@ -111,9 +110,9 @@ nav img{
 }
 
 h1{
-    font-size:58px;
-    line-height:1.05;
-    letter-spacing:-2px;
+    font-size:62px;
+    line-height:1.03;
+    letter-spacing:-3px;
     margin:16px 0 22px;
 }
 
@@ -153,6 +152,51 @@ h1{
     border-radius:22px;
     padding:28px;
     box-shadow:0 20px 55px rgba(18,45,82,.08);
+}
+
+.cardtop{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:26px;
+}
+
+.pill{
+    font-size:12px;
+    font-weight:700;
+    color:#16804b;
+    background:#eaf8f0;
+    padding:7px 10px;
+    border-radius:999px;
+}
+
+.amount{
+    font-size:40px;
+    font-weight:800;
+    margin:15px 0 4px;
+}
+
+.small{font-size:12px;color:#8492a7}
+.sub{color:var(--muted);font-size:14px;line-height:1.5}
+
+.bar{
+    height:8px;
+    background:#edf2f8;
+    border-radius:10px;
+    margin:25px 0 18px;
+    overflow:hidden;
+}
+.bar i{
+    display:block;
+    height:100%;
+    width:78%;
+    background:var(--blue);
+}
+
+.meta{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    color:#68778d;
 }
 
 /* ---------------- SECTIONS ---------------- */
@@ -223,7 +267,7 @@ h2{
 /* ---------------- CTA ---------------- */
 
 .cta{
-    padding:65px 0;
+    padding:75px 0;
     background:var(--navy);
     color:#fff;
 }
@@ -256,12 +300,12 @@ footer{
     justify-content:space-between;
 }
 
-/* ---------------- MOBILE ---------------- */
+/* ---------------- MOBILE OVERRIDES ---------------- */
 
 @media(max-width:850px){
     .hero-grid{
         grid-template-columns:1fr;
-        gap:32px;
+        gap:40px;
     }
     .grid3{
         grid-template-columns:1fr;
